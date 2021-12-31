@@ -1,0 +1,372 @@
+@font-face {
+    font-family: coves-light;
+    src: url(/static/fonts/Coves\ Light.otf);
+}
+@font-face {
+    font-family: coves-bold;
+    src: url(/static/assets/fonts/Coves\ Bold.otf);
+}
+body{
+    font-family:coves-light;
+    overflow-x:hidden;
+    background-color:#F1F4FF;
+    
+}
+.dropDown p{
+    margin-bottom:0 !important;
+}
+.dropDown p a{
+   color:black;
+}
+/*  */
+/* Mascot */
+.mascot{
+    position: fixed;
+    right:0;
+    top:1vw;
+    width:11vw;
+}
+
+.mascot img{
+    width:100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* navabar  */
+.navbar{
+    background-image: url('https://media.giphy.com/media/rSLRxg32BwgFrdyAuF/giphy.gif');
+    background-size: cover;
+    height: 13vw;
+    width: 13vw;
+    position: absolute;
+    z-index: 1;
+    transition: 500ms;
+    border-bottom-right-radius: 30vw;
+}
+/* navbar expand */
+.navbar_expand{
+    background-color: #2A8CA2;
+    height:50vw;
+    width: 50vw;
+    position: absolute;
+    z-index: 1;
+    transition: 500ms;
+    border-bottom-right-radius: 60vw;
+}
+/*  */
+/* hamburger_after clk */
+.hamburger_click{
+    margin: 3.4vw;
+    transform: rotate(90deg);
+    transition: 500ms;
+}
+
+.hamburger{
+    margin: 3.4vw;
+    transition: 500ms;
+}
+/*  */
+.firtImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+}
+.firtImg img{
+    width:38vw;
+    min-width:300px;
+}
+.service_bg{
+    height: 34vw;
+}
+/* headings */
+.head_1{
+font-style: normal;
+font-weight: bold;
+font-size: 5vw;
+text-align: center;
+color: #12083B;
+margin-top: 2vw;
+text-shadow: -2px -3px 6px #FFFFFF, 7px 4px 7px rgba(0, 0, 0, 0.23);
+}
+/*  */
+
+/* btn */
+.link{
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size:1vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #12083B;  
+    padding: 2vw; 
+}
+.dropDown{
+padding-top: 2vw;    
+margin-left:73vw;
+height:auto;
+width: auto;
+background: #E1F4FF;
+box-shadow: inset 3px 5px 8px rgba(0, 0, 0, 0.37);
+border-radius: 6px;
+position:absolute;
+z-index:100;
+}
+.btn{
+    display: flex;
+    align-items: flex-end;
+    margin:3vw 2vw 0 0; 
+}
+.btn_1{
+    cursor: pointer;    
+height: 5vw;
+width: 25vw;
+background: #AAF0FF;
+box-shadow: 0.21vw 0.95 1.75vw rgba(0, 0, 0, 0.15), -0.29vw -0.73vw 0.95vw rgba(179, 218, 255, 0.31);
+border-radius: 1vw;
+border: none;
+font-weight: bold;
+font-size: 2vw;
+text-align: center;
+margin-left: auto;
+color: #12083B;
+}
+.arrow_btn{
+font-weight: bold;
+font-size: 3vw;
+margin-top: 7vw;
+text-align: center;
+text-decoration: none; 
+color: #000000;
+
+}
+.arw_line{
+    text-align: center;
+    
+    width:20vw;
+    margin:auto;
+}
+.arw_line img{
+    width:100%;
+}
+/*  */
+/* bgimages */
+.chokidr{
+    height: 100%;
+    min-height:150px;
+    min-width:150px;
+    width: 100%;
+  
+    }
+.chokidr img{
+   height:100%;
+   width:100%;
+   float:right;
+   display:block;
+    }
+.pragya{
+
+background-size: contain;
+background-repeat: no-repeat;
+}
+ .pragya div video{
+    display:block;
+    height: 100%;
+    width: 100%;
+    box-shadow: 26px 17px 33px rgba(0, 0, 0, 0.56);
+    border-radius: 0 99px 99px 0;
+    
+            }
+.chokidr div video{
+       
+        display:block;
+        height: 100%;
+        width: 100%;
+        box-shadow: 26px 17px 33px rgba(0, 0, 0, 0.56);
+        border-radius: 99px 0 0 99px;
+        
+                
+}
+                        
+        
+.salt{
+height: 35vw;
+width: 35vw;
+background-size: contain;
+background-repeat: no-repeat;
+background-image: url("/static/images/salt\ and\ peper.png");
+}
+
+
+.daimond{
+height: 35vw;
+width: 35vw;
+background-size: contain;
+background-repeat: no-repeat;
+background-image: url("/static/images/diamond.png");
+}
+
+
+
+.app-content-right{
+
+}
+
+
+
+
+.app-right{
+    align-items: center;
+ margin-top:15vw;
+ grid-template-columns: 50% 50%;
+ display: grid;
+ 
+ margin-top: 15vw;
+ }
+ .app-left{
+    align-items: center;
+ margin-top:15vw;
+ grid-template-columns: 50% 50%;
+ display: grid;
+ 
+ margin-top: 15vw;
+ }
+ 
+
+
+    /*  */
+    .app{
+       align-items: center;
+    margin-top:15vw;
+    grid-template-columns: 50% 50%;
+    display: grid;
+    
+    margin-top: 15vw;
+    }
+    
+    .head_2{
+        font-weight: bold;
+        font-size: 4vw;
+        text-align: center;
+        color: #12083B;
+        text-shadow: -2px -3px 6px #FFFFFF, 7px 4px 7px rgba(0, 0, 0, 0.23);
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
+
+ .subHead{
+    font-weight: bold;
+    font-size: 1.75vw;
+    text-align: center;
+    color: #198B9B;
+    padding: 2vw;
+ }
+ 
+ .context{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.75vw;
+    text-align: center;
+   
+    color: #000000;
+    
+ }
+
+
+ /* footer */
+.footer_bg{
+    height:70vw;
+    width: 100%;
+    
+    background-size:auto;
+    background-repeat: no-repeat;
+    
+    }        
+    
+    .footer_content a{
+        font-weight: normal;
+        font-size: 1.75vw;
+        text-decoration-line: underline;
+        margin: 2vw;
+        color: #ffffff;
+    }
+    .footer_content{
+    display: flex;
+    
+     padding-top:50vw;
+     margin-left: 5vw;
+    }
+     .links{
+         width: 27vw;
+         height:auto;
+     }
+     .head_3{
+        font-weight: bold;
+        font-size: 2.63vw;
+    
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    .social{
+        margin-top: 5vw;
+    }
+    .social_icons{
+        margin-top: 5vw;
+    }
+    .icon_sm{
+        margin: 0.56vw;
+    }
+    
+    .connect{
+    height:7vw ;
+    width: 25vw;
+    background: #30CBB8;
+    box-shadow: inset -0.5vw -0.2vw 0.7vw rgba(255, 255, 255, 0.39), inset 0.5vw 0.2vw 0.6vw rgba(0, 0, 0, 0.25);
+    border-radius: 57px;
+    border: none;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+    color: #000000;
+    }
+    /* footer end */
+
+
+#vidbg-1{
+    z-index:-10;
+    position:relative;
+    top:-80vw;
+    left:0;
+    width:100%;
+   
+}
+
+#vidbg-1 video{
+   
+  width:100vw;
+
+}
+
+#vidbg-2{
+    z-index:-10;
+    position:relative;
+    top:-70vw;
+    left:0;
+    width:100%;
+   
+}
+
+#vidbg-2 video{
+   
+  width:100vw;
+
+}

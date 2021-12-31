@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<style>
+    .hidden{
+        display: none;
+    }
+    body{
+        background-color:#F1F4FF;
+    }
+    .white{
+        background-color: white;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data" id="content_form">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="blog_type">Please Choose template type</label>
+        <select class="form-control" id="template_type" name='template_type'>
+          <option>Type1</option>
+          <option>Type2</option>
+          <option>Type3</option>
+        </select>
+    </div>
+    <div id="media_content">
+        
+    </div>
+    <br><br>
+    <div id="text_content">
+        
+    </div>
+    <button type="button" id="submit_button" class="btn-btn-primary">Upload Content</button>    
+    </form>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/content_upload.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Title: {{blog.title}}</h1>
+<h1>Content1: </h1><p>{{detail.content1}}</p>
+<h1>Content2: </h1><p>{{detail.content2}}</p>
+<h1>Content3 Title: {{detail.content3_title}}</h1>
+<h1>Content3: </h1><p>{{detail.content3}}</p>
+<h1>Content4 Title: {{detail.content4_title}}</h1>
+<h1>Content4: </h1><p>{{detail.content4}}</p>
+<h1>Image: </h1><img src="{{detail.image.url}}">
+<h1>Video: </h1><video src="{{detail.video.url}}"></video>
+{% endblock %}

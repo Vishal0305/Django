@@ -1,0 +1,163 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page1</title>
+    
+    <link rel="stylesheet" href="{% static 'css/scroller.css' %}">
+    <style>
+        @font-face {
+    font-family: coves-light;
+    src: url(assets/fonts/Coves\ Light.otf);
+}
+@font-face {
+    font-family: coves-bold;
+    src: url(assets/fonts/Coves\ Bold.otf);
+
+
+    
+}
+@keyframes move {
+  from{width: 100%;right:0;}
+  to {width:0%;right:0}
+  
+}
+
+#load_animation{
+    animation: move 5s;
+
+}
+body{
+    overflow:hidden;
+    font-family: 'coves-light';
+}
+    </style>
+</head>
+<body>
+    
+
+    <div class="container" data-0="transform:translateX(0%)"    data-4000="transform:translateX(-230%)">
+        <section style="position:absolute;right:0;top:0;z-index:100;width:100vw;overflow:hidden;height:100vh;" class="animate__animated animate__fadeOutRight">
+            
+                <div id="load_animation" style="position:absolute;height:100%;width:100%;background-image:url({% static 'images/portfolio_animate.svg' %});background-size:cover;float:right;">
+                   
+                </div>
+           
+        </section>
+</section>
+<section>
+
+<div style="display: grid;grid-template-columns: 60vw 40vw;">
+<div class="content">
+<h1 class="cont_heading">PRAGYA INTERNATIONAL SCHOOL</h1>
+<p class="cont_para">"It was an absolute pleasure working with Manthan Creations. The deliverables were very professional and it was great to work with! The company exceeded my expectations and will definitely be working with it again in the future. Highly recommend !!"</p>
+
+<p class="cont_footer">Dr.Navalsingh Jain Director <br> Pragya Group of Institutions</p>
+
+</div>
+<div class="img">
+    <div class="img_container" style="position:relative;top:-10vh;height: 80%; overflow: hidden;border-radius:100%;box-shadow: 0px 4px 250px -5px rgba(0, 0, 0, 0.25), inset 0px 4px 176px 54px rgba(211, 244, 255, 0.67);">
+        <video src="{% static 'videos/footerbg.m4v' %}" autoplay loop playsinline muted playbackRate = "5" style="height: 100%; width: 100%; display: block; object-fit: fill;"></video>
+    </div>
+</div>
+</div>
+
+</section>
+<section>
+    <div style="text-align: center; background-color: #FFFFF8FA; padding: 2vw; font-size: 20px;" class="logostory">
+        <h1 class="cont_footer">Logo Story</h1>
+        <p  class="logo_content">Pristine white in colour and loyalty in their veins, the personality of swans is worth being admired. This bird has its own glory in Indian culture. It is not only considered the “Vahan” or “Vehicle” of Saraswati, the goddess of learning but also a symbol of conscience in Indian literature. The life course of a human being is like a swan because it is possible to acquire knowledge everywhere. It is said that the swan is the only animal with a conscience - that is, it is the discretion to separate milk and water from water. It is believed that the swan chooses the pearl and releases the waste materials - as should be the understanding out of any kind of learning and teaching. The loyalty of swans is of paramount importance to humans. If out of a pair, one of the swans dies, the other spends their entire life alone. Like the law of the forest, they do not fight for female partners. They choose their partner on the basis of mutual understanding. A better and stronger sense of family bonding and social feelings are observed in them compared to other birds and animals. It is believed that when a person becomes perfect, he attains the intrinsic qualities of a swan, and when someone takes “Samadhi”, he says that he has become a “Paramahansa”. Paramahamsa is considered to be the greatest noble title in mankind in Indian culture. In our logo, the Convocation Cap on the Swan’s head reflects our belief in the importance of modern education. The books on which the swan is seated, reflect our scriptures. As an educational institution, our aim is to provide world-class education based on the “Shraman” culture that can prepare children to grow up as wise and noble citizens in the future. Our attempt is always to instill the values of kindness, loyalty, integrity, sensitivity, and rationality that Swans imbibe, in our students.</p>
+        
+        </div>
+    
+    <div class="content">
+        <div>
+            <!-- <img style="height:65%; margin:2vw 0 0 2vw;" src="{{media_contents.1.image.url}}" alt="">
+     -->
+
+        </div>
+    <p class="logo_content">Chokidr is an intelligent contactless system company which ensure safety and wellness of consumers. It is smart, advanced, Indian and guard for thousands of users. We designed a face of Indian man with mustache and cap who is mostly recognised as security persons. Being a security agent the logo represents the sense of security and kinship.</p>
+    
+    <div class="sideIMG">
+        <img style="height: 20%; width: 20%;"  src="{{media_contents.2.image.url}}" alt="">
+
+      <div style="text-align: center; padding:2vw;">
+          <p class="logo_content"> Pragya International School, a newly setup center of learning under Shri Pragya Jain Smarak Samiti, Bijainagar. We were asked to help develop the Brand Identity for the institute inspiring young minds in spiritual, intellectual, social and physical development.</p>
+      </div>
+     
+
+
+
+
+    </div>
+    </div>
+    
+    
+    
+    </section>
+
+    <section style="width: 100%;">
+        <div style="display: flex;flex-direction: column;" class="img">
+            <img style=" height: 40%; margin:2vw 0 0 2vw;"  src="{{media_contents.4.image.url}}" alt="" id="">
+            <img style=" height: 40%; margin:2vw 0 0 2vw;"  src="{{media_contents.3.image.url}}" alt="">
+          
+        </div>
+     
+        <img style=" height: 80%; margin:2vw 0 0 2vw;"  src="{{media_contents.5.image.url}}" alt="">
+        
+        <div style="display: flex;flex-direction: column; justify-content: center; align-items: center;" class="img">
+            <h1>Deliverables </h1>
+            <ul style="list-style: none; text-align:center;">
+            <li>Logo</li>
+            <li>BillBoards</li>
+            <li>Letterheads</li>
+            <li>Envelopes</li>
+            <li>Business Diaries</li>
+            <li>School Accessories</li>
+
+            </ul>
+            <img style=" height: 40%; margin:2vw 0 0 2vw;"  src="{{media_contents.6.image.url}}" alt="">
+            
+          
+        </div>
+
+
+
+      
+
+        
+        </section>
+      <section>
+          
+        <div style="display: flex;flex-direction: column;" class="img">
+            <img style=" height: 40%; margin:2vw 0 0 2vw;"  src="{{media_contents.7.image.url}}" alt="">
+            <img style=" height: 40%; margin:2vw 0 0 2vw;"  src="{{media_contents.8.image.url}}" alt="">
+          
+        </div>
+
+      </section>
+
+
+
+        
+    </div>
+    
+    <script type="text/javascript" src="{% static 'js/skrollr.js' %}"></script>
+	<script type="text/javascript">
+     skrollr.init();
+	</script>
+    <script>
+        window.onload = () => {
+            setTimeout(()=>{
+                console.log("hi");
+                document.getElementsByTagName("body")[0].style.overflow="scroll";
+                document.getElementById("load_animation").style.display="none";
+
+            },4000)
+  
+};
+    </script>
+</body>
+</html>

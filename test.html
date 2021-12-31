@@ -1,0 +1,34 @@
+{% for project in projects %}
+{% if forloop.counter|divisibleby:"2" %}
+<div id="bgvideo" style="position:relative;z-index:-1">
+    <video src="{% static 'videos/bgvideo1.m4v' %}" autoplay loop playsinline muted playbackRate = "5" style="position:absolute;width:100vw;top:-53.5vw;z-index:-1;"></video>
+</div>
+<div class="app">
+    <div class="pragya"> </div>
+    <!-- content -->
+    <div class="content">
+        <h2 class="head_2">PRAGYA INTERNATIONAL SCHOOL</h2>
+        <p class="subHead">Brand Identity</p>
+        <p class="context">Created an identity which will remembered as a symbol of knowledge, nobility and royalty.</p>
+    <a class="arrow_btn" href="">View More</a>
+    <p class="arw_line" ><img src="{% static 'images/arrow.svg' %}" alt=""></p>
+    </div>
+    <!--  -->
+
+</div>
+{% else %}
+<div class="app">
+    <!-- content -->
+    <div class="content">
+        <h2 class="head_2">CHOKIDR</h2>
+        <p class="subHead">Logo</p>
+        <p class="context">A surveillance without an identity would not be able to recognize hence a logo is the foremost necessity.</p>
+        <a class="arrow_btn" href="">View More</a>
+        <p class="arw_line" ><img src="{% static 'images/arrow.svg' %}" alt=""></p>
+    </div>
+    <!--  -->
+<div class="chokidr"> </div>
+
+</div>
+{% endif %}
+{% endfor %}

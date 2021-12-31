@@ -1,0 +1,307 @@
+
+     {% extends 'base.html' %}
+     {% load static %}
+
+     {% block title %}About us{% endblock %}
+     {% block css %}
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     {% endblock %}
+     {% block content %}
+     <div class="container-fluid d-flex flex-column align-items-center">
+        <div class="image">
+            <img src = "{% static 'images/about.png' %}">
+        </div>
+        <div class ="content">
+              <h1 class="big-text" style="text-align:center;font-weight:900;font-size:5vw;-webkit-text-stroke-width:3px;">A&nbsp;B&nbsp;O&nbsp;U&nbsp;T  &nbsp;&nbsp;&nbsp;U&nbsp;S</h1>
+              <p style="margin-top: 5vw; font-size: 1.5vw;;text-align:center">
+              Manthan creations, a design company which serves multiplicity in brand solutions, web development and marketing. Our Goal is to empower the vision of ambitious projects to build an enduring brand. We stay client-oriented while ensuring quality of work done by our group of thinkers, designers, writers and developers. Fit to fill in all the trends, strategise to build an impact, we create designs which stays in mind.
+              </p>
+        </div>
+        <div style="width:100vw;">
+            <div class="outer">
+        <!-- Section on the video -->
+        <div style=" position: absolute; width:100%; margin-top: 25vw;">
+            <h1 class="big-text" align ="center">THE TEAM</h1>
+             <!-- Carousel starts -->
+        <div class="content2 container-fluid">
+            <div class="row">
+                  <div class="col-md-1 col-sm-1 col-2 col-lg-1" id="left_arrow">
+                        <img src = "{% static 'images/left_arrow.png' %}">
+                  </div>
+                  <div class="col-md-10 col-lg-10 col-8 col-sm-10">  
+                    <div class="carousel row">
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+
+                        </div>
+                        <div class="card-bottom">
+                          <h1 align="center">Lorem Ipsum</h1>
+                          <p class="card-text">Content of the first image</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+
+                        </div>
+                        <div class="card-bottom">
+                          <h1 align="center">Lorem Ipsum</h1>
+                          <p class="card-text">Content of the first image</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+
+                        </div>
+                        <div class="card-bottom">
+                          <h1 align="center">Lorem Ipsum</h1>
+                          <p class="card-text">Content of the first image</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+
+                        </div>
+                        <div class="card-bottom">
+                          <h1 align="center">Lorem Ipsum</h1>
+                          <p class="card-text">Content of the first image</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+
+                        </div>
+                        <div class="card-bottom">
+                          <h1 align="center">Lorem Ipsum</h1>
+                          <p class="card-text">Content of the first image</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+
+                        </div>
+                        <div class="card-bottom">
+                          <h1 align="center">Lorem Ipsum</h1>
+                          <p class="card-text">Content of the first image</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+
+                        </div>
+                        <div class="card-bottom">
+                          <h1 align="center">Lorem Ipsum</h1>
+                          <p class="card-text">Content of the first image</p>
+                        </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <div class="col-md-1 col-sm-1 col-2 col-lg-1" id="right_arrow">
+                      <img src = "{% static 'images/right_arrow.png' %}">
+                </div>
+            </div>
+            
+        </div>
+        <!-- Carousel ends -->
+        </div>
+        <!-- Section on the video ends -->
+
+            <div class="fullscreen-bg">
+              <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+                  <source src="{% static 'videos/backward.m4v' %}" type="video/webm">
+              </video>
+            </div>
+          </div>
+      </div>
+
+      <!-- Logo section starts -->
+      <div style="width:100%; margin-top: 500px;" class="row" id="var-margin">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-9">
+          <h1 align="center" class="big-text">OUR LOGO</h1>
+          <div class="d-flex justify-content-center">
+            <div class="badge">अ</div>
+            <div style="width:10px"></div>
+            <div class="badge in-active">A</div>
+          </div>
+          <div style="text-align: center;width:60%;margin:auto" class="container logo-text" style="">
+            In the midst of the milky ocean, Manthan churn out the hidden creation <br>
+
+            With an absolute choice of pearls and proportion we decide the designing notion. <br>
+            
+            
+            When the equals comes together the disclosure turns the imaginations <br>
+            
+            Ocean has a blue to tell you the truth, we have an essence of it to walk into <br>
+            
+            Markets and trends could be the glue, Manthan is what will sail you through <br>
+            
+            No matter what the Storm maybe, will always have the third eye vision to see<br>
+            
+            
+          </div>
+          
+        </div>
+
+        <div id="logo-div" class="col-lg-6 col-md-6 col-sm-6 col-3">
+          <img id="logo" src="{% static 'images/logo.png' %}" alt="">
+        </div>
+      </div>
+      <!-- Logo section ends -->
+
+      <!-- Accordian section starts -->
+<div style="width:100vw;">
+  <div class="outer">
+    <!-- Section on the video -->
+    <div style=" position: absolute; width:100%; margin-top: 150px;">
+        <h1 class="big-text" style="text-align:center">JOIN US</h1>
+          <div class="content2 container-fluid d-flex align-items-center accordian-section" style="width:30%;margin:auto;">
+            <div id="accordion">
+              <div class="card accordian" style="">
+                <div class="card-header" id="headingOne" style="background-color:transparent !important;border-bottom:none !important;">
+                    <div class="title ui-title" style="margin-left: 20px;">
+                      UI DESIGNER
+                    </div>
+                    <div class="arrow-button ui-designer">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <img width="40px" height="40px" src="{% static 'images/down_arrow.png' %}" alt="">
+                      </button>
+                    </div>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <hr class="card-line">
+                  <div class="card-body">
+                    <span class="card-body-text">We welcome the one who could stand out with an identity in the similar crowd. The ideal UI designer should have an eye for the polished art design, possess superior UI skills and be capable to translate all principle requirements into interaction glides and artifacts. We expect a hands- on personality to transform the ideas into beautiful, intuitive, and functional user interfaces. We also invite UI interns for the same gist of creativity with a progressive learning attitude.</span><br>
+                    <div class="apply-now">
+                      <a href="https://forms.gle/2ZLsTgqjaGisXp8D6" target="_blank"><button type="button" class="btn btn-applynow">Apply Now</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card accordian">
+                <div class="card-header" id="headingTwo" style="background-color:transparent !important;border-bottom:none !important;">
+                    <div class="title ui-title" style="margin-left: 20px;">
+                      UX DESIGNER
+                    </div>
+                    <div class="arrow-button ui-designer">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <img width="40px" height="40px" src="{% static 'images/down_arrow.png' %}" alt="">
+                      </button>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <hr class="card-line">
+                  <div class="card-body">
+                    <span class="card-body-text">We welcome the one who could stand out with an identity in the similar crowd. The ideal UI designer should have an eye for the polished art design, possess superior UI skills and be capable to translate all principle requirements into interaction glides and artifacts. We expect a hands- on personality to transform the ideas into beautiful, intuitive, and functional user interfaces. We also invite UI interns for the same gist of creativity with a progressive learning attitude.</span><br>
+                    <div class="apply-now">
+                      <a href="https://forms.gle/2ZLsTgqjaGisXp8D6" target="_blank"><button type="button" class="btn btn-applynow">Apply Now</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+    </div>
+    <!-- Section on the video ends -->
+
+        <div class="fullscreen-bg">
+          <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+              <source src="{% static 'videos/backward.m4v' %}" type="video/webm">
+          </video>
+        </div>
+      </div>
+  </div>
+      <!-- Accordian section ends -->
+</div>
+
+{% endblock %}
+
+
+{% block js %}
+     <!-- slick carousel -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      /*Handling variable margin top*/
+      let var_margin_ele = document.getElementById("var-margin")
+      window.addEventListener('load',()=>{
+        let margin = 0.993*(window.innerWidth) - 1220;
+        var_margin_ele.style.marginTop = margin+"px";
+      })
+      window.addEventListener('resize',()=>{
+        let margin = 0.993*(window.innerWidth) - 1220;
+        var_margin_ele.style.marginTop = margin+"px";
+      })
+      /*Handling variable margin top ends*/
+
+      let all_elements = document.querySelectorAll('.ui-designer')
+      let all_title = document.querySelectorAll('.ui-title')
+      all_elements.forEach((ele,index)=>{
+        ele.addEventListener('click',()=>{
+          let accordians = document.querySelectorAll('.accordian');
+          accordians.forEach((ele)=>{
+            console.log(ele)
+            ele.classList.add('hidden')
+          })
+          accordians[index].classList.remove('hidden')
+          let ui_div = ele;
+          let ui_title = all_title[index];
+        if(ui_div.classList.contains('down-arrow')){
+            ui_div.classList.remove('down-arrow');
+            ui_title.classList.remove('position-center')
+            let accordians = document.querySelectorAll('.accordian');
+          accordians.forEach((ele)=>{
+            console.log(ele)
+            ele.classList.remove('hidden')
+          })
+        }
+        else{
+          ui_div.classList.add('down-arrow');
+          ui_title.classList.add('position-center')
+        }
+        })
+      })
+
+      /*Handling arrows of carousel*/
+      let left_arrow = document.getElementById("left_arrow");
+      let right_arrow = document.getElementById("right_arrow")
+      $('.carousel').slick({
+        prevArrow:left_arrow,
+        nextArrow:right_arrow,
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 938,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 740,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+/*Handling arrows of carousel ends*/
+</script>
+
+{% endblock %}

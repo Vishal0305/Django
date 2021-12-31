@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<style>
+    .hidden{
+        display: none;
+    }
+    body{
+        background-color:#F1F4FF;
+    }
+    .white{
+        background-color: white;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div style="margin:200px 0;">
+<form method="POST" enctype="multipart/form-data" id="content_form">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="content1">Add content for box1</label>
+        <textarea class="form-control" id="content1" name='content1' required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="content2">Add content for box2</label>
+        <textarea class="form-control" id="content2" name='content2' required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="content1">Add title for text content3</label>
+        <input type="text" class="form-control" id="content3_title" name='content3_title' required>
+    </div>
+    <div class="form-group">
+        <label for="content1">Add content for box3</label>
+        <textarea type="text" class="form-control" id="content3" name='content3' required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="content1">Add title for text content4</label>
+        <input type="text" class="form-control" id="content4_title" name='content4_title' required>
+    </div>
+    <div class="form-group">
+        <label for="content1">Add content for box4</label>
+        <textarea type="text" class="form-control" id="content4" name='content4' required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="content1">Add Image</label>
+        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+    </div>
+    <div class="form-group">
+        <label for="content1">Add Video</label>
+        <input type="file" class="form-control" id="video" name='video' accept="video/*" required>
+    </div>
+
+    <button type="submit" id="submit_button" class="btn-btn-primary">Upload Blog Content</button>    
+    </form>
+</div>
+{% endblock %}

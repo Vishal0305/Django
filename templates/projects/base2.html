@@ -1,0 +1,468 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+    <!-- animatecss -->
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <!-- animatecss -->
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Bootstrap ends -->
+     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+     <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Slick carousel ends -->
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    {% block css %}
+    {% endblock %}
+    <style>
+         @font-face {
+    font-family: coves-light;
+    src: url({% static 'fonts/CovesLight.otf' %});
+    }
+    @font-face {
+    font-family: coves-bold;
+    src: url( {% static 'fonts/CovesBold.otf' %});
+    }
+
+ 
+    
+      .footer-container .footer{
+    min-height:750px;
+   
+    width: 100vw;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer-container .ftr-content{
+  
+    padding: 10%;
+}
+
+.footer-container li {
+    list-style: none;
+    margin: 70px;
+}
+
+.footer-container ul a {
+    color: white;
+    font-size: 24px;
+   
+}
+
+.footer-container .ftr-content{
+    display: flex;
+}
+.contact-button{
+    background: #30CBB8;
+box-shadow: inset -8px -4px 10px rgba(255, 255, 255, 0.39), inset 7px 4px 9px rgba(0, 0, 0, 0.25);
+border-radius: 57px;
+height:4vw;
+width: 15vw;
+font-size: 1.8vw;
+border-style: none;
+cursor:pointer;
+
+
+}
+.footer-container .copyright{
+   display: block;
+   margin-top: 3%;
+   margin-left:3%;
+   text-align: center;
+}
+
+.footer-container .ftr-icon{
+
+
+    display: flex;
+   
+}
+
+#bgaudio-icon-container{
+  width:1vw;
+  height:1vw;
+  min-width:50px;
+  min-height:50px;
+  position:fixed;
+  top:1vw;
+  right:5vw;
+  z-index:1000;
+  cursor:pointer;
+}
+#bgaudio-icon-container img{
+  width:60%;
+  
+  
+}
+#nav-hamburger{
+  position:absolute;
+  left:3%;
+  top:3%;
+  width:2%;
+  cursor:pointer;
+  
+}
+#nav-hamburger img{
+  width:100%;
+  width:100%;
+  
+  
+}
+#nav-logo{
+  position:absolute;
+  left:3.5%;
+  top:5%;
+  width:25%;
+}
+#nav-logo img{
+  width:100%;
+  height:100%;
+}
+#nav-link-1{
+  position:absolute;
+  top:3%;
+  left:55%;
+}
+#nav-link-2{
+  position:absolute;
+  top:20%;
+  left:48%;
+}
+#nav-link-3{
+  position:absolute;
+  top:36%;
+  left:43%;
+}
+#nav-link-4{
+  position:absolute;
+  top:42%;
+  left:20%;
+}
+.navbar-container-active{
+    width: 70vw;
+    min-width:200px;
+    min-height:300px;
+    height: 70vw;
+    overflow:hidden;
+    position:fixed;
+    background-image:url('/static/images/navbarbg.gif');
+    background-size:cover;
+    border-radius: 50%;
+    top:-24vw;
+    left:-8vw;
+    z-index:100;
+    display:none;
+   
+
+ }
+ .navbar-content-active{
+   position:fixed;
+   top:0;
+   left:0;
+   width:80vw;
+   height:90vw;
+   z-index:200;
+   display:none;
+
+ }
+.nav-links a{
+  color:white;
+  font-family:'coves-light';
+  font-size:3vw;
+}
+.navbar-container-inactive{
+  z-index:100;
+  width:8vw;
+  height:8vw;
+  border-radius:0 0 100% 0;
+  background-color:#2A8CA2;
+  position:fixed;
+  top:0;
+  left:0;
+  cursor:pointer;
+  
+
+}
+.navbar-container-inactive-img{
+     width:1.5vw;
+     height:1.5vw;
+     top:2.5vw;
+     left:2.2vw;
+     cursor:pointer;
+     z-index:10000;
+     position:fixed;
+
+  
+}
+.nav-links a:hover{
+  text-decoration:none;
+}
+
+body{
+    overflow:hidden;
+    font-family:coves-light;
+}
+@keyframes move {
+  from{width: 100%;right:0;}
+  to {width:0%;right:0}
+  
+}
+
+#load_animation{
+    animation: move 5s;
+
+}
+
+/* jsfks */
+.section-1{
+    margin:20vh 50px 0 100px;
+
+}
+
+.title-header{
+    text-transform: uppercase;
+    color: #12083B;
+    text-shadow: -2px -3px 6px #FFFFFF, 7px 4px 7px rgba(0, 0, 0, 0.23); 
+     -webkit-text-stroke: 1px #12083B;
+    text-align:center;
+    font-size:6rem;
+
+}
+.project-description{
+    text-transform: uppercase;
+    color: #000000;
+    text-align:center;
+    font-size:2rem;
+
+}
+.project-testimonial{
+    margin-top:15vh;
+    text-align:center;
+    color: #26508B;
+    font-family: 'Tinos', serif;
+    font-style: italic;
+    width:400px;
+
+}
+.project-client{
+    margin-top:10vh;
+    color: rgba(0, 0, 0, 0.73);
+    font-family:coves-light;
+    text-align:center;
+    width:150px;
+
+}
+.section-5{
+  position:relative;
+  left:-300px;
+
+}
+.section-6{
+  position:relative;
+  left:-300px;
+
+}
+.section-2 div{
+    position:relative;
+    top:-100px;
+     overflow: hidden;
+    border-radius:100%;
+    box-shadow: 0px 4px 250px -5px rgba(0, 0, 0, 0.25), inset 0px 4px 176px 54px rgba(211, 244, 255, 0.67);
+   height:500px;
+    width:500px;
+
+    
+}
+.section-5{
+  position:relative;
+
+}
+.section-5 div{
+    position:relative;
+    top:-100px;
+     overflow: hidden;
+    border-radius:100%;
+    box-shadow: 0px 4px 250px -5px rgba(0, 0, 0, 0.25), inset 0px 4px 176px 54px rgba(211, 244, 255, 0.67);
+   height:500px;
+    width:500px;
+
+    
+}
+.bg-videocontainer{
+
+}
+.bubble-1{
+    position:relative;
+    left:-500px;
+    height:1000px;
+    width:1000px;
+    z-index:-1;
+}
+.section-4{
+  width:400px;
+  position:relative;
+  left:-600px;
+  margin-top:10vh;
+  color: #12083B;
+  font-weight:bold;
+  text-align:center;
+  font-size:2rem;
+}
+@media only screen and (min-width: 600px) {
+ .section-1{
+     
+    margin:20vh 50px 0 100px;
+    text-align:center;
+
+ }
+ .bg-videocontainer{
+    
+}
+.section-2 div{
+    position:relative;
+    top:-200px;
+     overflow: hidden;
+    border-radius:100%;
+    box-shadow: 0px 4px 250px -5px rgba(0, 0, 0, 0.25), inset 0px 4px 176px 54px rgba(211, 244, 255, 0.67);
+   height:800px;
+    width:800px;
+
+    
+}
+
+.section-5 div{
+    position:relative;
+    top:-200px;
+     overflow: hidden;
+    border-radius:100%;
+    box-shadow: 0px 4px 250px -5px rgba(0, 0, 0, 0.25), inset 0px 4px 176px 54px rgba(211, 244, 255, 0.67);
+   height:800px;
+    width:800px;
+
+    
+}
+
+   
+}
+    </style>
+</head>
+<body style="height:100vh;overflow-y:hidden;">
+ <!-- navbar -->
+   <!-- inactive  -->
+  <div >
+        <img src="{% static 'images/logo-navigation.svg' %}" onclick="opennav()" class="navbar-container-inactive-img">
+  </div>
+  <div class="navbar-container-inactive" onclick="opennav()">
+    
+  </div>
+  
+    <!-- inactive  -->
+    <!-- active -->
+    <div class="navbar-container-active animate__animated animate__bounceIn">
+
+    </div>
+    <div class="navbar-content-active">
+       <div id="nav-hamburger" onclick="closenav()">
+       <img src="{% static 'images/logo-navigation.svg' %}">
+         
+       </div>
+       <div id="nav-logo">
+        
+        <a href="{%  url 'blog:home' %}"><img src="{% static 'images/hamburger-navigation.svg' %}"></a>
+      </div>
+      <div id="nav-link-1" class="nav-links">
+        <a href="{% url 'blog:about-us' %}">ABOUT US</a>
+        
+      </div>
+      <div id="nav-link-2" class="nav-links">
+        <a href="{% url 'blog:portfolio' page=1 %}">PORTFOLIO</a>
+        
+      </div>
+      <div id="nav-link-3" class="nav-links">
+        <a href="/#service-header">SERVICES</a>
+        
+      </div>
+      <div id="nav-link-4" class="nav-links">
+        <a href="{% url 'blog:blogs' page=1 %}">BLOG</a>
+        
+      </div>
+    </div>
+    <!-- active -->
+  <!-- navbar -->
+    
+    
+  <div id="bgaudio-icon-container">
+      <img id="bgaudio-icon" src="{% static 'audios/music-icon-on.svg' %}">
+  </div>
+   
+    {% block content %}
+    {% endblock %}
+    
+    {% block js %}
+    {% endblock %}
+    <audio controls autoplay style="opacity: 0;" height="0" width="2" style="z-index:-1000" loop>
+      <source src="{% static 'audios/bgaudio.mp3' %}" type="audio/mpeg">
+      
+    </audio>
+    
+     
+   
+ <script>
+  $("#bgaudio-icon-container").click(function(){
+    if($("#bgaudio-icon").attr("src")=="static/audios/music-icon-on.svg"){
+    $("#bgaudio-icon").attr("src","static/audios/music-icon-off.svg");
+    $("#backgroundAudio").pause();
+    }else{
+    $("#bgaudio-icon").attr("src","static/audios/music-icon-on.svg");
+    $("#backgroundAudio").play();}
+  })
+ </script>
+ <!-- navbar-fuctions  -->
+    <script>
+       function opennav(){
+         $(".navbar-container-active").css("display","block");
+         $(".navbar-content-active").css("display","block");
+         $(".navbar-container-inactive").css("display","none");
+         $(".navbar-container-inactive-img").css("display","none");
+         
+
+       }
+       function closenav(){
+            
+            $(".navbar-container-active").css("display","none");
+             $(".navbar-content-active").css("display","none");
+             $(".navbar-container-inactive").css("display","block");
+             $(".navbar-container-inactive-img").css("display","block");
+         
+             
+            }
+       
+        
+    </script>
+
+ <!-- navbar-fuctions  -->
+</body>
+</html>

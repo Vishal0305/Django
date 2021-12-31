@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+    <!-- nav -->
+    <!-- <nav class="navbar">
+     <img class="hamburger" src="images/menu.svg" alt="">
+    </nav> -->
+    <!--  -->
+    {% block title %}Contact | Manthan Creations{% endblock %}
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    {% endblock %}
+
+{% block content %}
+<!-- <div class="header">
+    <div class="navbar-inactive">
+        <div style="margin:20%;;width:25%">
+                 <img src="{% static 'images/menu.svg' %}">
+        </div>
+    </div>
+    <div class="navbar-active">
+        <img src="{% static 'images/manthan_logo.png' %}">
+            
+        
+    </div>
+    <div class="navbar-content-1 qwerty">
+        ABOUT US
+    </div>
+    <div class="navbar-content-2 qwerty">
+        PORTFOLIO
+    </div>
+    <div class="navbar-content-3 qwerty">
+        SERVICES
+    </div>
+    <div class="navbar-content-4 qwerty">
+        BLOCK
+    </div>
+    <div class="navbar-content-5 qwerty">
+     TEAM
+ </div>
+ </div> -->
+ <div class="sec-1">
+     <img src="{% static 'images/contact_image-1.png' %}">
+
+ </div>
+ <div class="sec-2">
+   
+     <div class="row">
+         
+         <div class="col-lg-5" >
+             <div class="contact-box">
+                 <div class="row contact-box-inside">
+                     <div class="col-3">
+                       <img src="{% static 'images/Vector.png' %}">
+                     </div>
+                     <div class="col-9">
+                          <h4>Phone</h4>
+                          <p>+91 9913918530 </p>
+                          <p>+91 9913918530</p>
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+        <div class="col-lg-5">
+             <div class="contact-box">
+
+                 <div class="row contact-box-inside">
+                     <div class="col-3">
+                         <img src="{% static 'images/Rectangle.png' %}">
+                     </div>
+                     <div class="col-9">
+                         
+                         <h4>Email</h4>
+                         <p>contact@manthancreations.com</p>
+                         
+                         
+                     </div>
+                 </div>
+
+                 
+             </div>
+         </div>
+         <!-- <div class="col-lg-4">
+             <div class="contact-box">
+                 <div class="row contact-box-inside">
+                     <div class="col-3">
+                         <img src="{% static 'images/Subtract.png' %}">
+
+                     </div>
+                     <div class="col-9">
+                         <h4>Address</h4>
+                         <p>Temporarily working remotely</p>
+                        
+                     </div>
+                 </div>
+
+                 
+             </div>
+         </div> -->
+     </div>
+ </div>
+
+
+ <div class="sec-3">
+     <div class="sec-3-container">
+         <h3>WADE IN! LET'S TALK</h3>
+         <p>Book an appointment</p>
+     </div>
+ </div>
+<hr style="width:80%;margin:auto;margin-bottom:50px;background-color:#000000">
+ <div class="sec-4">
+          <form method="POST">     
+              {% csrf_token %}
+                     <div class="form-container">
+                         <div class="form-name form-box" style="border-radius:11px 11px 0 0">
+                              Name / Company <input type="text" name='name' required>
+
+                         </div>
+                         <div class="form-box form-email">
+                            Email <input type="email" name='email' required>
+                         </div>
+                         <div class="form-box form-phoneno">
+                             Phone no <input type="number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" name='mobile' id='mobile' required>
+                         </div>
+                         <div class="form-box form-message" style="border-radius:0px 0px 11px 11px">
+                             Message<input type="text" name='message' style="height:200px;width:100%;padding:5px !important;">
+                         </div>
+                     </div>
+                     <div class="button-submit-container">
+                         <button type="submit" class="btn button-submit">SUBMIT</button>
+                     </div>
+           </form>    
+</div>
+<div class="footer-content">
+   <div class="row">
+       <div class="col-6">
+           <div style="float:left">
+            
+           </div>
+
+         </div>
+       <div class="col-6">
+             <div style="float:right">
+             
+             
+             </div>
+
+       </div>
+   </div>
+</div>  
+
+
+
+
+{% endblock %}

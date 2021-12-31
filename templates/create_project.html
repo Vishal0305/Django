@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block css %}
+<style>
+  .hidden{
+    display: none;
+  }
+</style>
+{% endblock %}
+
+<h1>Create a Project</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" name='title' placeholder="title">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Content</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name='content' rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="blog_type">Choose Category for the project</label>
+      <select class="form-control" id="blog_type" name='category'>
+        <option value="webappd">Application and Website Development</option>
+        <option value="brandmarket">Branding & Marketing</option>
+        <option value="contentdesign">Content & Design</option>
+        <option value="ded">Digital Enterprise & Development</option>
+        
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="media_type">Choose Category for the project</label>
+      <select class="form-control" id="media_type">
+        <option >Photo</option>
+        <option >Video</option>
+      </select>
+    </div>
+
+    <div class="form-group" id ="image_div">
+      <label for="image">Add Cover Image</label>
+      <input type="file" name="image" id="image" accept="image/*">
+    </div>
+    <div class="form-group hidden" id ="video_div">
+      <label for="video">Add Cover Video</label>
+      <input type="file" name="video" id="video" accept="video/*">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Create Project</button>
+  </form> 
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+  let media_type = document.getElementById("media_type");
+  let image_div = document.getElementById("image_div");
+  let video_div = document.getElementById("video_div");
+  media_type.addEventListener('change',()=>{
+    if(media_type.value=='Photo'){
+      video_div.classList.add('hidden');
+      image_div.classList.remove('hidden');
+    }
+    else{
+      video_div.classList.remove('hidden');
+      image_div.classList.add('hidden');
+    }
+  })
+</script>
+{% endblock %}

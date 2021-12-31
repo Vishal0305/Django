@@ -1,0 +1,317 @@
+@font-face {
+    font-family: coves-light;
+    src: url(/static/fonts/Coves\ Light.otf);
+}
+@font-face {
+    font-family: coves-bold;
+    src: url(/static/assets/fonts/Coves\ Bold.otf);
+}
+.card-line{
+    background: rgba(180, 214, 255, 0.6);;
+    width:70%;
+    margin:auto;
+}
+.btn-applynow{
+    background: #30CBB8;
+box-shadow: inset -8px -4px 10px rgba(255, 255, 255, 0.39), inset 7px 4px 9px rgba(0, 0, 0, 0.25);
+border-radius: 57px;
+}
+img{
+
+    width: 100%;
+  }
+ body{
+     font-family:'coves-light';
+ }
+  .image{
+    width:30vw;
+    min-width: 240px;
+  }
+    .content{
+        width:50vw;
+        margin-top: 60px;
+    }
+    .content2{
+        margin-top: 80px;
+        width:100vw;
+        font-size: 1.09vw;
+    }
+    .big-text{
+        color:#12083B;
+        font-size: 3.64vw;
+    }
+    .custom-card{
+        height:40vh;
+        border: 8px solid #FFFFFF;
+        background-color: white;
+        border-radius: 10%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .card-bottom{
+        width: 100%;
+        margin-top: 100px;
+    }
+    body{
+        background-color:#F1F4FF;
+        margin:0;
+        padding:0;
+        overflow-x: hidden;
+    }
+    .text-content{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    h1{
+        font-size: 40px;
+    }
+        .outer{
+      position:relative;
+    }
+    .text-content1{
+      position: absolute;
+      bottom:10px;
+      z-index:100;
+    }
+   .fullscreen-bg {
+    position: relative;
+    right: 0;
+    left: 0;
+    z-index: -100;
+    width: 100vw;
+    height: 160vh;
+    min-height: 1300px;
+    overflow: visible;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.down-arrow{
+     transform: rotate(180deg); 
+     margin-right:10%;
+}
+
+.badge {
+    background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
+    background-color:#A5E5F1;
+    border: 2px solid white;
+    border-radius: 50%; /* one half of ( (border * 2) + height + padding ) */
+    box-shadow: 1px 1px 1px black;
+    font: bold 15px/13px Helvetica, Verdana, Tahoma;
+    height: 36px; 
+    width: 36px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.in-active{
+  opacity:0.5;
+}
+
+#logo{
+    width: 50vw;
+    position: absolute;
+   right:-50px;
+    top: -120px;
+}
+
+.arrow-image{
+  width:10vw;
+}
+#left_arrow{
+  cursor: pointer;
+  margin-top: 100px;
+}
+#right_arrow{
+  cursor: pointer;
+  margin-top: 100px;
+}
+
+.logo-text{
+    font-size: 23px;
+}
+
+.card-text{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 21px;
+}
+
+.accordian{
+    width:40%;
+    margin: 10px auto;
+    position: relative;
+}
+
+.arrow-button{
+    position: absolute;
+    right:10px;
+    top:0px;
+}
+
+.title{
+    width:40%;
+    text-align: center;
+    font-weight:bold;
+}
+
+.card{
+    width: 30vw;
+    min-width: 300px;
+    background: #F0F4FF;
+    border: none;
+   
+    box-shadow: inset 10px 5px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 99px;
+}
+
+.card-body{
+    width:70%;
+    margin: 20px auto;
+    text-align:center;
+}
+
+.card-body-text{
+    font-size: 18px;
+   
+}
+
+.accordian-section{
+    margin-top: 500px;
+}
+
+.apply-now{
+    text-align: center;
+    margin-top:3vw;
+}
+
+.position-center{
+    margin-left: auto !important;
+    margin-right: auto;
+}
+
+.hidden{
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .content {
+      width: 80vw;
+    }
+
+    .content2{
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    .card-text{
+        margin-top: 20px;
+    }
+
+    .card-bottom{
+        margin-top: 20px;
+    }
+
+    .logo-text{
+        font-size: 18px;
+    }
+
+    #logo{
+        width: 50vw;
+        position: absolute;
+        right: -50px;
+        top: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 580px) {
+    .custom-card{
+        height: 25vh;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    .card-text{
+        margin-top: 10px;
+        font-size: 17px;
+    }
+
+    .card-bottom{
+        margin-top: 10px;
+    }
+
+    #left_arrow{
+        margin-top: 80px;
+    }
+    #right_arrow{
+        margin-top: 80px;
+    }
+
+    .logo-text{
+        font-size: 15px;
+    }
+    #logo{
+        width: 55vw;
+        position: absolute;
+        left: -20px;
+        top: 0px;
+    }
+    #logo-div{
+        overflow-x: hidden;
+    }
+}
+
+
+
+@media only screen and (max-width: 420px) {
+    .custom-card{
+        height: 20vh;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    .card-text{
+        margin-top: 10px;
+        font-size: 17px;
+    }
+
+    .card-bottom{
+        margin-top: 10px;
+    }
+
+    #left_arrow{
+        margin-top: 60px;
+    }
+    #right_arrow{
+        margin-top: 60px;
+    }
+
+    .logo-text{
+        font-size: 15px;
+    }
+    #logo{
+        width: 55vw;
+        position: absolute;
+        left:0;
+        top: 0px;
+    }
+    #logo-div{
+        overflow-x: hidden;
+    }
+}

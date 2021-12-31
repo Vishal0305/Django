@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+  
+    {% block title %}Services{% endblock %}
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/portstyle.css' %}">
+    {% endblock %}
+
+   {% block content %}
+   <div class="mascot">
+    <img src="{% static 'images/mascot.png' %}">
+</div>
+   <div class="firtImg">
+    <img class="service_bg" src="{% static 'images/portfolio_top_pic.svg' %}" alt="">
+</div>
+<h1 class="head_1" style="font-weight: 900;-webkit-text-stroke-width: 3px;">P O R T F O L I O</h1>
+
+<div class="btn" style="display:flex;">
+    <button class="btn_1">Categories
+
+        <div class="category-arrow" style="float:right;margin-right:10%;">
+            <img src="{% static 'images/down-arrow.svg' %}">
+        </div>
+    </button>
+    
+    
+</div>
+<div class="dropDown">
+<p class="link" id="webd"> <a href="?category=webd">Application & website development </a></p>
+<hr>
+<p class="link"><a href="?category=appd">Branding & marketing</a></p>
+<hr>
+<p class="link">Content & designt</p>
+<hr>
+<p class="link">Digital Enterprise & Development</p>
+
+</div>
+
+{% for project in projects %}
+{% if forloop.counter|divisibleby:"2" %}
+<div id="bgvideo" style="position:relative;z-index:-1">
+    <video src="{% static 'videos/bgvideo1.m4v' %}" autoplay loop playsinline muted playbackRate = "5" style="position:absolute;width:100vw;top:-53.5vw;z-index:-1;"></video>
+</div>
+<div class="app-left">
+    <div class="pragya">
+        <div style="float:left">
+            <!-- <img src="{{ project.image.url }}"> -->
+            <video src="{{project.video.url}}" autoplay loop></video>
+        </div>
+     </div>
+    <!-- content -->
+    <div class="content">
+        <div style="width:80%;margin:auto">
+            <h2 class="head_2">{{project.title}}</h2>
+        </div> 
+        {% if project.type %}
+        <p class="subHead">{{project.type}}</p>
+        {% endif %}
+        <div style="width:80%;margin:auto">
+            <p class="context">{{project.content}}</p>
+        </div>
+    <a class="arrow_btn" href="/project/{{ project.id }}/detail">View More</a>
+    <p class="arw_line" ><img src="{% static 'images/arrow.svg' %}" alt=""></p>
+    </div>
+    <!--  -->
+
+</div>
+{% else %}
+<div class="app-right">
+    <!-- content -->
+    <div class="content">
+        <div style="width:80%;margin:auto">
+            <h2 class="head_2">{{project.title}}</h2>
+        </div>
+            {% if project.type %}
+            <p class="subHead">{{project.type}}</p>
+            {% endif %}
+        <div style="width:80%;margin:auto">
+            <p class="context">{{project.content}}</p>
+        </div>
+    <a class="arrow_btn" href="/project/{{ project.id }}/detail">View More</a>
+    <p class="arw_line" ><img src="{% static 'images/arrow.svg' %}" alt=""></p>
+    </div>
+    <!--  -->
+        <div class="chokidr"> 
+            <div style="float:right">
+            <!-- <img src="{{ project.image.url }}"> -->
+            <video src="{{project.video.url}}" autoplay loop></video>
+            </div>  
+        </div>
+
+</div>
+{% endif %}
+{% endfor %}
+
+<!--  -->
+
+
+
+
+{% endblock %}
+
+<!-- footer -->
+<!-- <div class="footer_bg">
+    <div class="footer_content">
+    <div class="links">
+        <a href="" class="footer_link">Blog / newsletter</a>
+    <a href="" class="footer_link">About us</a> <br><br><br>
+    <a href="" class="footer_link">Team + join us</a>
+    <a  href="" class="footer_link">Portfolio</a>
+    </div> -->
+    <!-- social icons  -->
+    <!-- <div class="social">
+    <h3 class="head_3">Lets connect</h3>
+    <div class="social_icons">
+    <img class="icon_sm"  src="assets/images/Blue_1_.svg" alt="">
+    <img class="icon_sm" src="assets/images/path14.svg" alt="">
+    <img class="icon_sm" src="assets/images/rect3687.svg" alt="">
+    <img class="icon_sm" src="assets/images/path5068.svg" alt="">
+    <img class="icon_sm" src="assets/images/behance.svg" alt="">
+    <img class="icon_sm" src="assets/images/medium-1 1.svg" alt="">
+    
+    </div>
+    
+    </div> -->
+    <!--  -->
+    <!-- button connect -->
+    <!-- <button  class="connect">Contact Us</button>
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    </div> -->
+    <!-- <div id="vidbg-2">
+        <video loop muted autoplay poster="img/videoframe.jpg">
+            <source src="assets/videos/footerbg.webm" type="video/webm">
+           
+        </video>
+    </div> -->
+
+
+
+<!-- javascriot -->
+{% block js %}
+<script src="{% static 'js/category.js' %}"></script>
+<script>
+    // // for nav
+    // $(".hamburger").click(function(){
+    //    $("nav").toggleClass("navbar_expand")
+    //    $(".hamburger").toggleClass("hamburger_click")
+    // });
+    // for dropdown
+    $(".dropDown").hide()
+    $(".btn_1").click(function(){
+    $(".dropDown").toggle();
+  });
+       </script> -->
+      <!-- Mascot movement -->
+       <script>
+       
+       var window_width = $(window).width() - $('.mascot').width();
+       
+       var document_height = $(document).height() - $(window).height();
+       
+       $(function () {
+           $(window).scroll(function () {
+               
+               var scroll_position = $(window).scrollTop();
+               // var object_position_left = window_width * (scroll_position / document_height);
+               var x=scroll_position*0.18;
+               var y=1000*(Math.sin(x/100)*Math.sin(x/100));
+               $('.mascot').css({
+                   'right': y
+               });
+               $('.mascot').css({
+                   'top': x
+               });
+               $('.mascot').css({
+                   'transform': 'rotate('+y*-0.15+'deg)'
+               });
+           });
+       });
+       </script>
+       
+{% endblock %}
+<!-- Mascot movement -->

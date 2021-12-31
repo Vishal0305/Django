@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!-- Bootstrap ends -->
+     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+     <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Slick carousel ends -->
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+     <!-- Navbar -->
+     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav> -->
+      <!-- Navbar ends -->
+      <br><br>
+    {% block content %}
+    {% endblock %}
+    
+    {% block js %}
+    {% endblock %}
+
+    <!-- <div class="footer-container">  
+      <div class="footer">
+
+          <div class="ftr-content">
+          <ul>
+              <li> <a href=""> Blog </a> </li>
+              <li> <a href=""> Join Us </a> </li>
+          </ul>
+          <ul>
+              <li> <a href=""> About us </a> </li>
+              <li> <a href=""> Portfolio </a> </li>
+              <li> <a href=""> Services </a> </li>
+          </ul>
+          
+      </div>
+
+      <div class="copyright">
+          <button class="ftr-btn">
+              Contact Us
+                  </button>
+              <p style="color: white; font-size: 24px;"> Lets Connect</p>
+
+              <div class="ftr-icon">
+                  <img class="icons" src="social icons/Blue_1_.png" alt="">
+                  <img class="icons" src="social icons/path14.png" alt="">
+                  <img class="icons" src="social icons/rect3687.png" alt="">
+                  <img class="icons" src="social icons/path5068.png" alt="">
+                  <img class="icons" src="social icons/behance.png" alt="">
+                  <img class="icons" src="social icons/medium-1 1.png" alt="">
+
+
+
+
+
+              </div>
+              
+          </div>
+
+          <p style="margin-left: 20px;color: white; font-size: 24px;" >&copy Manthan creations 2021 Privacy Policy</p>
+      
+      </div>
+  </div>
+      <div id="bgvideo" style="position:relative;z-index:-1">
+        <video src="{% static 'videos/footerbg.m4v' %}" autoplay loop playsinline muted playbackRate = "5" style="position:absolute;width:100vw;top:-50.5vw;z-index:-1;"></video>
+    </div> -->
+ 
+</body>
+</html>

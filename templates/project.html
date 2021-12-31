@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% for project in projects %}
+<h1>Project {{project.id}}</h1>
+<h1>Title {{project.title}}</h1>
+<p>{{project.content}}</p>
+{% endfor %}
+{% endblock %}
